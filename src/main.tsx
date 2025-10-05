@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp'
 import NotFound from './pages/NotFound'
 
 import Dashboard from './pages/Dashboard'
+import Settings from './pages/Settings'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -15,8 +16,9 @@ createRoot(document.getElementById('root')!).render(
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/sign-up" element={<SignUp />} />
-
+                
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/settings" element={<Settings />} />
                 
                 <Route path="*" element={<NotFound />} />
             </Routes>

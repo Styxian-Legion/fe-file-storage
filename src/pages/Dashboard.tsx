@@ -7,7 +7,7 @@ import Item from "../components/Item";
 export default function Dashboard() {
     return (
         <MasterLayout className="w-full pt-20">
-            <div className="w-full max-w-screen-2xl mx-auto px-4 md:px-0 flex flex-col gap-4">
+            <div className="w-full max-w-screen-2xl mx-auto px-4 flex flex-col gap-4">
 
                 {/* monitor free space */}
                 <div className="w-full flex flex-col gap-3 border rounded-md bg-slate-800 p-4">
