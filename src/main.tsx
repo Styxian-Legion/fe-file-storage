@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp'
 import NotFound from './pages/NotFound'
 
 import Dashboard from './pages/Dashboard'
+import Payment from './pages/Payment'
 import Settings from './pages/Settings'
 
 createRoot(document.getElementById('root')!).render(
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')!).render(
                 <Route path="/sign-up" element={<SignUp />} />
                 
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/payment" element={<Payment />} />
                 <Route path="/settings" element={<Settings />} />
                 
                 <Route path="*" element={<NotFound />} />
