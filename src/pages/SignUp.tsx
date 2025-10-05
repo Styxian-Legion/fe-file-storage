@@ -11,7 +11,7 @@ export default function SignUp(){
                 <div className="w-full border border-slate-200 shadow-md rounded-md bg-white">
                     <div className="w-full h-12 px-4 flex items-center justify-between border-b border-slate-200">
                         <h1 className="text-xl font-semibold">Create Account</h1>
-                        <Link to={"/"} className="text-sm font-semibold text-orange-500 hover:underline hover:underline-offset-4">Login</Link>
+                        <Link to={"/login"} className="text-sm font-semibold text-orange-500 hover:underline hover:underline-offset-4">Login</Link>
                     </div>
                     <form>
                         <div className="w-full p-4 flex flex-col gap-3">

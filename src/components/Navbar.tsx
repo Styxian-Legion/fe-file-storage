@@ -19,7 +19,7 @@ export default function Navbar() {
                     )}
                 </div>
                 <div className="flex items-center gap-4 text-sm font-semibold">
-                    <Link to={"/"}>Log In</Link>
+                    <Link to={"/login"}>Log In</Link>
                     <Link to={"/sign-up"} className="bg-red-500 px-3 py-1.5 rounded-md">Log out</Link>
                 </div>
             </div>
