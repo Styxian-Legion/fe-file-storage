@@ -1,56 +1,57 @@
 import { Link } from "react-router-dom"
-import MasterLayout from "../layout/MasterLayour"
-import TextField from "../ui/TextField"
+import AuthLayout from "../layout/AuthLayout"
 
-import { FaGoogle, FaApple, FaTelegramPlane } from "react-icons/fa";
+import Label from "../ui/Label"
+import InputField from "../ui/InputField"
+import Button from "../ui/Button"
 
-export default function SignUp(){
+import { FaEnvelope, FaLock } from "react-icons/fa"
+
+export default function SignUp() {
     return (
-        <MasterLayout className="w-full p-4 min-h-screen flex items-center justify-center">
-            <div className="w-full max-w-screen-lg grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div className="w-full border border-slate-200 shadow-md rounded-md bg-white">
-                    <div className="w-full h-12 px-4 flex items-center justify-between border-b border-slate-200">
-                        <h1 className="text-xl font-semibold">Create Account</h1>
-                        <Link to={"/login"} className="text-sm font-semibold text-orange-500 hover:underline hover:underline-offset-4">Login</Link>
-                    </div>
-                    <form>
-                        <div className="w-full p-4 flex flex-col gap-3">
-                            <TextField placeholder="Full Name" required/>            
-                            <TextField placeholder="E-Mail" required/>            
-                            <TextField placeholder="Password" required/>
-                            <button className="w-full h-12 font-medium hover:cursor-pointer bg-orange-500 text-white rounded-md">Create Account</button>            
-                        </div>
-                    </form>
-                    <div className="w-full p-2 flex justify-center items-center gap-3">
-                        <div className="w-28 min-h-0.5 bg-slate-200"></div>
-                        <span className="text-sm">Or</span>
-                        <div className="w-28 min-h-0.5 bg-slate-200"></div>
-                    </div>
-                    <div className="w-full p-4 flex justify-center items-center gap-3">
-                        <Link to={""} className="flex flex-col justify-center items-center gap-2">
-                            <div className="w-10 h-10 rounded-md border border-slate-200 flex items-center justify-center hover:bg-slate-100 duration-100">
-                                <FaGoogle className="w-8-h-8"/>
-                            </div>
-                            <span className="text-xs">Google</span>
-                        </Link>
-                        <Link to={""} className="flex flex-col justify-center items-center gap-2">
-                            <div className="w-10 h-10 rounded-md border border-slate-200 flex items-center justify-center hover:bg-slate-100 duration-100">
-                                <FaApple className="w-8-h-8"/>
-                            </div>
-                            <span className="text-xs">Apple</span>
-                        </Link>
-                        <Link to={""} className="flex flex-col justify-center items-center gap-2">
-                            <div className="w-10 h-10 rounded-md border border-slate-200 flex items-center justify-center hover:bg-slate-100 duration-100">
-                                <FaTelegramPlane className="w-8-h-8"/>
-                            </div>
-                            <span className="text-xs">Telegram</span>
-                        </Link>
-                    </div>
-                </div>
-                <div className="w-full hidden lg:block">
-                    
-                </div>
+        <AuthLayout header="Join Us" description="Please enter your details">
+            <div>
+                <Label htmlFor="email">Email Address</Label>
+                <InputField
+                    type="email"
+                    id="email"
+                    name="email"
+                    icon={<FaEnvelope />}
+                    placeholder="Enter your email"
+                    required
+                />
             </div>
-        </MasterLayout>
+            <div>
+                <Label htmlFor="password">Password</Label>
+                <InputField
+                    type="password"
+                    id="password"
+                    name="password"
+                    icon={<FaLock />}
+                    placeholder="Enter your password"
+                    required
+                />
+            </div>
+            <div>
+                <Label htmlFor="confirmPassword">Confirm Password</Label>
+                <InputField
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    icon={<FaLock />}
+                    placeholder="Enter your password"
+                    required
+                />
+            </div>
+            <Button type="submit" className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600">
+                Sign Up
+            </Button>
+            <p className="text-center text-sm text-slate-600">
+                I have an account?{" "}
+                <Link to="/login" className="text-blue-500 hover:text-blue-600 font-semibold hover:underline transition-colors">
+                    Login
+                </Link>
+            </p>
+        </AuthLayout>
     )
 }

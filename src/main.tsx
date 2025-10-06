@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import NotFound from './pages/NotFound'
+import CheckoutPage from './pages/Checkout'
 
 import Dashboard from './pages/Dashboard'
 import Payment from './pages/Payment'
@@ -20,12 +21,13 @@ createRoot(document.getElementById('root')!).render(
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/sign-up" element={<SignUp />} />
-                
+                <Route path="/checkout" element={<CheckoutPage />} />
+
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/payment" element={<Payment />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/users" element={<Users />} />
-                
+
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
