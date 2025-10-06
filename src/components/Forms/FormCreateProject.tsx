@@ -7,9 +7,9 @@ export default function FormCreateProject() {
         <>
             <div className="w-full bg-white rounded-md shadow-md border-2 border-gray-200 overflow-hidden">
                 <div className="bg-gradient-to-r from-blue-500 to-indigo-600 px-6 py-4">
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                    <h2 className="text-lg font-bold text-white flex items-center gap-2">
                         <HiSparkles className="w-6 h-6" />
-                        Create New Project
+                        New Project
                     </h2>
                 </div>
                 <div className="p-6">

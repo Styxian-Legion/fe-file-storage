@@ -1,5 +1,4 @@
 import { FaCheck, FaKey, FaTrash } from "react-icons/fa";
-import { RiApps2Fill } from "react-icons/ri";
 import Button from "../ui/Button";
 import InputField from "../ui/InputField";
 
@@ -7,11 +6,9 @@ import InputField from "../ui/InputField";
 export default function ListProject() {
     return (
         <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                <RiApps2Fill className="w-7 h-7 text-blue-600" />
+            <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
                 Your Projects
             </h2>
-
             {/* item */}
             <div className="w-full flex flex-col gap-2 bg-white">
                 <div className="w-full h-14 px-2 flex justify-between items-center border border-slate-200">
@@ -33,7 +30,7 @@ export default function ListProject() {
                     </div>
                 </div>
                 <div className="w-full p-2">
-                    <div className="flex flex-col md:flex-row items-center gap-4">
+                    <div className="flex items-center gap-2">
                         <div className="w-full">
                             <InputField type="text" placeholder="CORS" />
                         </div>
