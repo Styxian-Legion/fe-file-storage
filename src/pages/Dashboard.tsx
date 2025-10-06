@@ -5,41 +5,12 @@ import TabSettings from '../components/TabSettings';
 import TabUsers from '../components/TabUsers';
 
 import { useState } from 'react';
-import { FaTrash,  FaCrown, FaLock, FaUser, FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import {  MdPayment, MdSettings, MdPeople, MdDashboard } from "react-icons/md";
-
-// TextField Component
-function TextField({ placeholder, value, onChange, name, type = "text" }: any) {
-    return (
-        <input
-            type={type}
-            name={name}
-            value={value}
-            onChange={onChange}
-            placeholder={placeholder}
-            className="w-full h-12 px-4 rounded-lg border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all bg-white"
-        />
-    );
-}
 
 // Main Dashboard Component
 export default function Dashboard() {
     const [activeTab, setActiveTab] = useState('projects');
-    const [formData, setFormData] = useState({
-        projectName: '',
-        cors: '',
-        oldPassword: '',
-        newPassword: '',
-        confirmPassword: ''
-    });
-
-    const handleInputChange = (e: any) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
+    
     const tabs = [
         { id: 'projects', label: 'Projects', icon: <MdDashboard className="w-5 h-5" /> },
         { id: 'payments', label: 'Payments', icon: <MdPayment className="w-5 h-5" /> },
