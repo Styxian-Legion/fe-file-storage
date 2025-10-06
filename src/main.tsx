@@ -10,9 +10,6 @@ import NotFound from './pages/NotFound'
 import CheckoutPage from './pages/Checkout'
 
 import Dashboard from './pages/Dashboard'
-import Payment from './pages/Payment'
-import Settings from './pages/Settings'
-import Users from './pages/Users'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -24,10 +21,6 @@ createRoot(document.getElementById('root')!).render(
                 <Route path="/checkout" element={<CheckoutPage />} />
 
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/payment" element={<Payment />} />
-                <Route path="/settings" element={<Settings />} />
-                <Route path="/users" element={<Users />} />
-
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
